@@ -1,3 +1,3 @@
-class ArticleSerializer < ActiveModel::Serializer
+class StudentAthleteSerializer < ActiveModel::Serializer
   attributes :id, :firstName, :middleName, :lastName, :birthdate
 end
