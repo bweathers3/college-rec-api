@@ -1,0 +1,2 @@
+class StudentAthlete < ApplicationRecord
+end
