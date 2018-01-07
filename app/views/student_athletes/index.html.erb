@@ -1,0 +1,23 @@
+<h1>Student set_student_athletes</h1>
+
+ <div class="row">
+   <div class="col-md-8">
+ <!-- #7 -->
+     <% @student_athletes.each do |student_athlete| %>
+       <div class="media">
+         <div class="media-body">
+           <h4 class="media-heading">
+ <!-- #8 -->
+             <%= link_to student_athlete.firstName, student_athlete %>
+           </h4>
+           <small>
+             <%= student_athlete.lastName %>
+           </small>
+         </div>
+       </div>
+     <% end %>
+   </div>
+   <div class="col-md-4">
+ <!-- #9 -->
+   </div>
+ </div>
