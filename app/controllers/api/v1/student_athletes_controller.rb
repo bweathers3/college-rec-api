@@ -32,7 +32,7 @@ module Api
       end
 
       def student_athlete_params
-        params.permit(:firstName, :middleName, :lastName, :birthdate, :gender)
+        params.permit( :firstName, :middleName, :lastName, :birthdate, :gender, :intended_enrollment_year )
       end
 
     end
