@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is the backend api for the Get recruited app which is a react/redux frontend.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.5.0, rails 5.0, both developement and production use postgresql
 
-* System dependencies
+* The current sate on this application is view-less
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
