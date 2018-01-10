@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180108202727) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "student_athletes", force: :cascade do |t|
     t.text "firstName"
     t.text "middleName"
