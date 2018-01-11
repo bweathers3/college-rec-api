@@ -4,7 +4,7 @@ This application is the backend api for the Get recruited app which is a react/r
 
 * The gem file includes both;  gem 'active_model_serializers', '~> 0.10.0' and gem 'rack-cors'
 
-* There are currently no views for this application
+* There are currently no views for this application; it is intended to be a strictly API app
 
 * In local development the sever should be on localhost:5000 so use the following command: rails s -p 5000
 
