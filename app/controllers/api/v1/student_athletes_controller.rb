@@ -18,7 +18,7 @@ module Api
       end
 
       def show
-        render json: @student_athlete = StudentAthlete.find(params[:id])
+        render json: @student_athlete
       end
 
       def destroy
