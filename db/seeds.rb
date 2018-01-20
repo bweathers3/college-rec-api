@@ -1,7 +1,6 @@
+
 =begin
 require 'random_data'
-
-
  5.times do
    StudentAthlete.create!(
      firstName:  RandomData.random_word,
