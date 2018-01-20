@@ -9,14 +9,30 @@ module Api
       end
 
       def create
-        ##@student = StudentAthlete.find(params[:student_athlete_id])
-        ##@profile = @student.Profile.create(profile_params)
-        @student_athlete.profile.create(profile_params)
-        if @profile.save
-          render json: @profile, status: 201
-        else
+        student_athlete_id = params.delete(:student_athlete_id)
+        @student_athlete = StudentAthlete.find(student_athlete_id)
+
+        if @student_athlete.profile
+          @student_athlete.profile.destroy
+          @student_athlete.save!
+        end
+
+        filtered_params = profile_params
+        filtered_params[:student_athlete_id] = student_athlete_id
+        @profile = Profile.new(filtered_params)
+
+        unless @profile.valid?
           Rails.logger.info @profile.errors.full_messages
           render json: { errors: @profile.errors.full_messages }, status: 422
+          return
+        end
+
+        @student_athlete.profile = @profile
+        if @student_athlete.save
+          render json: @profile, status: 201
+        else
+          Rails.logger.info @student_athlete.errors.full_messages
+          render json: { errors: @student_athlete.errors.full_messages }, status: 422
         end
       end
 
@@ -39,8 +55,7 @@ module Api
       end
 
       def profile_params
-        params.require( :profile).permit(:street)
-      ##  params.permit( :student_athlete_id, :street, :city, :state, :zip, :country, :email, :phone, :siblings )
+        params.require( :profile).permit( :street, :city, :state, :zip, :country, :email, :phone, :siblings )
       end
 
     end
