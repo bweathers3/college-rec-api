@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180117144846) do
+ActiveRecord::Schema.define(version: 20180121010758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "academics", force: :cascade do |t|
+    t.text "schoolName"
+    t.text "counselorName"
+    t.text "counselorEmail"
+    t.string "counselorPhone"
+    t.string "gpa"
+    t.string "classRank"
+    t.string "sat"
+    t.string "act"
+    t.bigint "student_athlete_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["student_athlete_id"], name: "index_academics_on_student_athlete_id"
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.bigint "student_athlete_id"
@@ -41,5 +56,6 @@ ActiveRecord::Schema.define(version: 20180117144846) do
     t.string "intended_enrollment_year"
   end
 
+  add_foreign_key "academics", "student_athletes"
   add_foreign_key "profiles", "student_athletes"
 end
