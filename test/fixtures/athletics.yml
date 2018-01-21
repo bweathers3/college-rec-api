@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stat1: MyString
+  stat2: MyString
+  stat3: MyString
+  stat4: MyString
+  stat5: MyString
+  stat6: MyString
+  stat7: MyString
+  stat8: MyString
+  stat9: MyString
+  stat10: MyString
+  stat11: MyString
+  stat12: MyString
+  student_athlete: one
+
+two:
+  stat1: MyString
+  stat2: MyString
+  stat3: MyString
+  stat4: MyString
+  stat5: MyString
+  stat6: MyString
+  stat7: MyString
+  stat8: MyString
+  stat9: MyString
+  stat10: MyString
+  stat11: MyString
+  stat12: MyString
+  student_athlete: two
