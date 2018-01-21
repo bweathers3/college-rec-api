@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180121010758) do
+ActiveRecord::Schema.define(version: 20180121024006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,25 @@ ActiveRecord::Schema.define(version: 20180121010758) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["student_athlete_id"], name: "index_academics_on_student_athlete_id"
+  end
+
+  create_table "athletics", force: :cascade do |t|
+    t.string "stat1"
+    t.string "stat2"
+    t.string "stat3"
+    t.string "stat4"
+    t.string "stat5"
+    t.string "stat6"
+    t.string "stat7"
+    t.string "stat8"
+    t.string "stat9"
+    t.string "stat10"
+    t.string "stat11"
+    t.string "stat12"
+    t.bigint "student_athlete_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["student_athlete_id"], name: "index_athletics_on_student_athlete_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -57,5 +76,6 @@ ActiveRecord::Schema.define(version: 20180121010758) do
   end
 
   add_foreign_key "academics", "student_athletes"
+  add_foreign_key "athletics", "student_athletes"
   add_foreign_key "profiles", "student_athletes"
 end
