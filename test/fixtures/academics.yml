@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schoolName: MyText
+  counselorName: MyText
+  counselorEmail: 
+  counselorPhone: MyString
+  gpa: MyString
+  classRank: MyString
+  sat: MyString
+  act: MyString
+  student_athlete: one
+
+two:
+  schoolName: MyText
+  counselorName: MyText
+  counselorEmail: 
+  counselorPhone: MyString
+  gpa: MyString
+  classRank: MyString
+  sat: MyString
+  act: MyString
+  student_athlete: two
