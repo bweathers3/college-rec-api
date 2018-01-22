@@ -47,11 +47,12 @@ module Api
 
     private
       def set_student_athletes
-        @student_athlete = StudentAthlete.find(params[:id])
+        @student_athlete = StudentAthlete.find(params[:student_athlete_id])
       end
 
       def set_profiles
-        @profile = Profile.find(params[:id])
+        @student_athlete = set_student_athletes
+        @profile = @student_athlete.profile(student_athlete_id: params[:id]) 
       end
 
       def profile_params
