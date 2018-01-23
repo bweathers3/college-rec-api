@@ -47,8 +47,8 @@ module Api
 
     private
       def set_student_athletes
-        student_athlete_id = params.delete(:student_athlete_id)
-        @student_athlete = StudentAthlete.find(student_athlete_id)
+        @student_athlete_id = params.delete(:student_athlete_id)
+        @student_athlete = StudentAthlete.find(@student_athlete_id)
 
         #@student_athlete = StudentAthlete.find(params[:student_athlete_id])
       end
@@ -59,7 +59,7 @@ module Api
       end
 
       def profile_params
-        params.require( :profile).permit( :street, :city, :state, :zip, :country, :email, :phone, :siblings )
+        params.require( :profile ).permit( :street, :city, :state, :zip, :country, :email, :phone, :siblings )
       end
 
     end
