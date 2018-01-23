@@ -49,8 +49,6 @@ module Api
       def set_student_athletes
         @student_athlete_id = params.delete(:student_athlete_id)
         @student_athlete = StudentAthlete.find(@student_athlete_id)
-
-        #@student_athlete = StudentAthlete.find(params[:student_athlete_id])
       end
 
       def set_profiles
