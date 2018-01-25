@@ -1,20 +1,10 @@
 
-# Get Recruited Backend - college-rec-api
+# GetRecruited Backend - college-rec-api
 
 
-## Get Recruited Technologies
+## GetRecruited
 
-The Get Recruited site is comprised of a Rails API backend, and a React/redux frontend.
-
-* Ruby version 2.5.0, rails 5.0
-* For both development and production we use postgresql as the database
-* The gem file includes both;  gem 'active_model_serializers', '~> 0.10.0' and gem 'rack-cors'
- In local development the sever should be on localhost:5000
-
-
-#### What is a frontend?
-
-When you visit our website you're interacting with two systems, a frontend application and a backend application. The frontend application is responsible for displaying images, text and data on our web pages.
+The GetRecruited site is comprised of a Rails API backend, and a React/redux frontend.
 
 
 #### What is a backend?
@@ -22,6 +12,15 @@ When you visit our website you're interacting with two systems, a frontend appli
 The backend (where you are now) is responsible for:
 
 - exchanging data with the frontend via custom API endpoints
+
+
+Points regarding the backend technologies:
+
+* Ruby version 2.5.0, rails 5.0
+* For both development and production we use postgresql as the database
+* The gem file includes both;  gem 'active_model_serializers', '~> 0.10.0' and gem 'rack-cors'
+* In local development the sever should be on localhost:5000
+
 
 
 #### Local Development Environment
@@ -34,16 +33,16 @@ git clone https://github.com/[YOUR-GITHUB-NAME]/college-rec-api.git
 cd college-rec-api
 
 
-#### Running Get Recruited Backend:
+#### Running GetRecruited Backend:
 
 To run the backend use the localhost:5000 port, run: rails s -p 5000
 
-You can now visit http://localhost:5000  and you should see a Rails welcome message!
+You can now visit http://localhost:5000  and you should see a Rails welcome message! Since there are no views associated with the backend you will not be able to navigate beyond the welcome page.
 
 
 ## Finding An Issue
 
-* If you have everything setup you can find issues to work on. **Get Recruited** uses Github's built in issue tracker. A listing of all our issues can be found [here]https://github.com/bweathers3/college-rec-api/issues.
+* If you have everything setup you can find issues to work on. **GetRecruited** uses Github's built-in issue tracker. A listing of all our issues can be found [here]https://github.com/bweathers3/college-rec-api/issues.
 
 * Once you have found an issue, leave a comment stating that you plan to work on the issue. Once assigned to you, your mission is a go!
 
@@ -63,7 +62,7 @@ You can now visit http://localhost:5000  and you should see a Rails welcome mess
 
   * Be tied to a single issue
   * Be named after the issue with the designated issue # as the name of the branch
-  
+
 * Once your pull request has been submitted, it will be reviewed by a team member. This process helps to familiarize more people with the codebase, and provides a second set of eyes and perspective to your new feature.
 
 * If your code is accepted, it will be merged into the `master` branch.
@@ -74,6 +73,12 @@ You can now visit http://localhost:5000  and you should see a Rails welcome mess
 ### Ruby
 
 [Adhere to the Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
+
+
+### Rails
+
+[Adhere to the Ruby Style Guide](https://github.com/bbatsov/rails-style-guide)
+
 
 
 ## License
