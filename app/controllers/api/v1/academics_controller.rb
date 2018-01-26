@@ -47,19 +47,16 @@ module Api
 
     private
       def set_student_athletes
-        @student_athlete_id = params.delete(:student_athlete_id)
-        @student_athlete = StudentAthlete.find(@student_athlete_id)
+        @student_athlete = StudentAthlete.find(params[:id])
       end
 
       def set_academics
-        @student_athlete = set_student_athletes
-        @academic = @student_athlete.academic
+        @academic = Academic.find(params[:student_athlete_id])
       end
 
       def profile_params
         params.require( :profile).permit( :schoolName, :counselorName, :counselorEmail, :counselorPhone, :gpa, :classRank, :sat, :act )
       end
-
     end
   end
 end
