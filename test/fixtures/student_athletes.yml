@@ -1,12 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  user: one
   firstName: MyText
   middleName: MyText
   lastName: MyText
   birthdate: 2018-01-01
 
 two:
+  user: two
   firstName: MyText
   middleName: MyText
   lastName: MyText
